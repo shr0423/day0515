@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 600px;
+            height: 500px;
+            background: gray;
+        }
+
+        .left {
+            width: 50px;
+            height: 100%;
+            background: skyblue;
+            float: left;
+        }
+
+        .right {
+            width: 550px;
+            height: 450px;
+            background: pink;
+            float: left;
+        }
+
+        .buttom {
+            width: 550px;
+            height: 50px;
+            background: blue;
+            float: right;
+            text-align: center;
+        }
+
+        .right img {
+            width: 550px;
+            height: 450px;
+        }
+    </style>
+    <script>
+        function createImage() {
+            for (let i = 1; i <= 10; i++) {
+                let sel = document.getElementById("sel");
+                let img = document.createElement("img");
+                img.src = "../images/m" + i + ".jpg";
+                img.style.height = "40px";
+                sel.appendChild(img);
+            }
+        } 
+    </script>
+</head>
+
+<body onLoad="createImage()">
+    <div class="wrapper">
+        <div class="left" id="sel">
+        </div>
+        <div class="right">
+            <img src="../images/m1.jpg" id="pic">
+        </div>
+        <div class="buttom">
+            <button>◀</button>
+            <button>▶</button>
+        </div>
+    </div>
+</body>
+
+</html>
